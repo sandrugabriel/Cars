@@ -1,5 +1,6 @@
 ﻿using Cars.Controller;
 using Cars.Forms;
+using Cars.Panel_uri;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -108,7 +109,7 @@ namespace Cars
         {
 
             this.form.removepnl("pnlLogin");
-
+            this.form.Controls.Add(new pnlSignUp(form));
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
