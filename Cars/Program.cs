@@ -1,4 +1,4 @@
-﻿using Cars.Controller;
+﻿using Cars.Forms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,12 +15,10 @@ namespace Cars
         [STAThread]
         static void Main()
         {
-           // Application.EnableVisualStyles();
-          //  Application.SetCompatibleTextRenderingDefault(false);
-          //  Application.Run(new Cars());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FormLogin());
 
-            ControllerCars controllerClients = new ControllerCars();
-            controllerClients.afisare();
 
         }
     }

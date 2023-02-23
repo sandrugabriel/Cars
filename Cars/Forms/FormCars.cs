@@ -1,5 +1,4 @@
-﻿using Cars.Panel_uri;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Cars.Forms
+namespace Cars
 {
-    public partial class FormLogin : Form
+    public partial class FormCars : Form
     {
-        public FormLogin()
+        public FormCars(int id1)
         {
             InitializeComponent();
-
-            this.Controls.Add(new pnlStart(this));
         }
+
+
         public void removepnl(string pnl)
         {
 
@@ -37,13 +36,10 @@ namespace Cars.Forms
 
         }
 
-        private void FormLogin_Load(object sender, EventArgs e)
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
         }
     }
 }
