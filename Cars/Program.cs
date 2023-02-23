@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cars.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +15,13 @@ namespace Cars
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Cars());
+           // Application.EnableVisualStyles();
+          //  Application.SetCompatibleTextRenderingDefault(false);
+          //  Application.Run(new Cars());
+
+            ControllerCars controllerClients = new ControllerCars();
+            controllerClients.afisare();
+
         }
     }
 }

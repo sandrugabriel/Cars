@@ -8,18 +8,18 @@ namespace Cars.Models
 {
     internal class Masina
     {
-        private int id;
         private int idClient;
+        private int id;
         private string marca;
         private string model;
         private int anAparitie;
         private int pret;
        
 
-        public Masina(int id,int idClient, string marca, string model, int an, int pret)
+        public Masina(int idClient,int id, string marca, string model, int an, int pret)
         {
-            this.id = id;
             this.idClient = idClient;
+            this.id = id;
             this.marca = marca;
             this.model = model;
             this.anAparitie = an;
@@ -31,8 +31,8 @@ namespace Cars.Models
         {
             string[] proprietati = text.Split(',');
 
-            this.id = int.Parse(proprietati[0]);
-            this.idClient = int.Parse(proprietati[1]);
+            this.idClient = int.Parse(proprietati[0]);
+            this.id = int.Parse(proprietati[1]);
             this.marca = proprietati[2];
             this.model = proprietati[3];
             this.anAparitie = int.Parse(proprietati[4]);

@@ -25,7 +25,7 @@ namespace Cars.Models
         public Client(string text)
         {
 
-            string[] prop = text.Split(';');
+            string[] prop = text.Split(',');
 
             this.id = int.Parse(prop[0]);
             this.name = prop[1];
