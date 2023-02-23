@@ -64,7 +64,8 @@ namespace Cars.Panel_uri
         private void btnSignUp_Click(object sender, EventArgs e)
         {
 
-
+            this.form.removepnl("pnlStart");
+            this.form.Controls.Add(new pnlSignUp(form));
 
         }
 

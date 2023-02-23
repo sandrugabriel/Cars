@@ -87,5 +87,106 @@ namespace Cars.Controller
         }
 
 
+        public bool verificationPassword(string password)
+        {
+
+            if (password.Count() <= 4)
+            {
+                return false;
+            }
+
+            int semn = 0;
+            int semn1 = 0;
+            for (int i = 0; i < password.Count(); i++)
+            {
+                if ((int)password[i] >= 65 && (int)password[i] <= 90)
+                {
+
+                    semn = 1;
+
+                }
+
+                if ((int)password[i] >= 48 && (int)password[i] <= 57)
+                {
+                    semn1 = 1;
+
+                }
+
+
+            }
+
+            if (semn == 1 && semn1 == 1)
+            {
+                return true;
+            }
+
+
+            return false;
+
+
+
+        }
+
+
+        public Client getClientById(int id)
+        {
+
+            for (int i = 0; i < clients.Count; i++)
+            {
+                if (clients[i].getId() == id)
+                {
+                    return clients[i];
+                }
+            }
+
+            return null;
+        }
+
+        public int generareId()
+        {
+            Random random = new Random();
+
+            int id = random.Next();
+            while (this.getClientById(id) != null)
+            {
+
+                id = random.Next();
+
+            }
+
+
+            return id;
+
+        }
+
+        public void save(string textul)
+        {
+
+            string text = textul;
+            string path = Application.StartupPath + @"/data/clients.txt";
+            File.AppendAllText(path, text + "\n");
+
+
+        }
+
+        public string numeById(int id)
+        {
+
+            for (int i = 0; i < clients.Count; i++)
+            {
+
+                if (id == clients[i].getId())
+                {
+                    return clients[i].getName();
+                }
+
+            }
+
+            return null;
+        }
+
+
+
+
     }
 }
