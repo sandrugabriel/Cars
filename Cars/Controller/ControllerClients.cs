@@ -53,6 +53,38 @@ namespace Cars.Controller
 
         }
 
+        public int idByNume(string nume)
+        {
+
+            for (int i = 0; i < clients.Count; i++)
+            {
+
+                if (clients[i].getName().Equals(nume))
+                {
+                    return clients[i].getId();
+                }
+
+            }
+
+            return -1;
+        }
+
+
+        public bool verification(string password, string username)
+        {
+
+            for (int i = 0; i < clients.Count; i++)
+            {
+
+                if (clients[i].getPassword().Equals(password) && clients[i].getName().Equals(username))
+                {
+                    return true;
+                }
+
+            }
+
+            return false;
+        }
 
 
     }
