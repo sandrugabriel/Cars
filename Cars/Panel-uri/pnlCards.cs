@@ -71,6 +71,8 @@ namespace Cars.Panel_uri
                     string title = pnlcard.lblTitle1.Text;
                     int id = controllerCars.idByNume(title);
                     this.form.removepnl("pnlCards");
+                    this.form.Controls.Add(new pnlView(idClient, id, form));
+
                 }
                 x += 200;
 

@@ -82,7 +82,61 @@ namespace Cars.Controller
             return -1;
         }
 
+        public string nameById(int id)
+        {
 
+            for (int i = 0; i < cars.Count; i++)
+            {
+                if (cars[i].getId() == id)
+                {
+                    return (cars[i].getMarca());
+                }
+            }
+
+            return null;
+        }
+
+        public string modelById(int id)
+        {
+
+            for (int i = 0; i < cars.Count; i++)
+            {
+                if (cars[i].getId() == id)
+                {
+                    return (cars[i].getModel());
+                }
+            }
+
+            return null;
+        }
+
+        public int anById(int id)
+        {
+
+            for (int i = 0; i < cars.Count; i++)
+            {
+                if (cars[i].getId() == id)
+                {
+                    return cars[i].getAnAparitie();
+                }
+            }
+
+            return -1;
+        }
+
+        public int priceById(int id)
+        {
+
+            for (int i = 0; i < cars.Count; i++)
+            {
+                if (cars[i].getId() == id)
+                {
+                    return cars[i].getPret();
+                }
+            }
+
+            return -1;
+        }
 
     }
 }
