@@ -180,5 +180,24 @@ namespace Cars.Controller
 
         }
 
+
+        public void getMyCars(List<Masina> cars1, int idClient)
+        {
+
+            for (int i = 0; i < cars.Count; i++)
+            {
+                if (cars[i].getIdClient() == idClient)
+                {
+
+                    Masina a = cars[i];
+                    cars1.Add(a);
+                }
+
+            }
+
+
+        }
+
+
     }
 }

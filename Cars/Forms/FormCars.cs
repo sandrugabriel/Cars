@@ -70,6 +70,7 @@ namespace Cars
 
             this.Controls.Add(new pnlAddCar(id, this));
             this.removepnl("pnlCards");
+            this.removepnl("pnlMyCars");
             this.button5.Visible = false;
             this.button3.Visible = true;
             this.button4.Visible = true;
@@ -82,6 +83,7 @@ namespace Cars
 
             this.Controls.Add(new pnlCards(id, cars, this));
             this.removepnl("pnlAddCar");
+            this.removepnl("pnlMyCars");
             this.button5.Visible = true;
             this.button3.Visible = false;
             this.button4.Visible = true;
@@ -95,6 +97,14 @@ namespace Cars
         private void button4_Click(object sender, EventArgs e)
         {
 
+            cars.Clear();
+            this.button4.Visible = false;
+            this.button3.Visible = true;
+            this.button5.Visible = true;
+            this.removepnl("pnlCards");
+            this.removepnl("pnlAddCar");
+            controllerCars.getMyCars(cars, id);
+            this.Controls.Add(new pnlMyCars(id, cars, this));
         }
     }
 }
