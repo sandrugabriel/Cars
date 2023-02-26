@@ -83,6 +83,9 @@
     <Compile Include="Panel-uri\pnlStart.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Panel-uri\pnlUpdate.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Panel-uri\pnlView.cs">
       <SubType>Component</SubType>
     </Compile>
