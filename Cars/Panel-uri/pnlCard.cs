@@ -65,7 +65,7 @@ namespace Cars.Panel_uri
             this.Controls.Add(lblPrice);
             this.Controls.Add(lblPrice1);
 
-            this.lblPrice.Text = "Price";
+            this.lblPrice.Text = "Price(Euro €)";
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = font; 
             this.lblPrice.Location = new System.Drawing.Point(23, 75);

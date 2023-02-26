@@ -138,5 +138,47 @@ namespace Cars.Controller
             return -1;
         }
 
+
+        public Masina getCarById(int id)
+        {
+
+            for (int i = 0; i < cars.Count; i++)
+            {
+                if (cars[i].getId() == id)
+                {
+                    return cars[i];
+                }
+            }
+
+            return null;
+        }
+
+        public int generareId()
+        {
+            Random random = new Random();
+
+            int id = random.Next();
+            while (this.getCarById(id) != null)
+            {
+
+                id = random.Next();
+
+            }
+
+
+            return id;
+
+        }
+
+        public void save(string textul)
+        {
+
+            string text = textul;
+            string path = Application.StartupPath + @"/data/cars.txt";
+            File.AppendAllText(path, text + "\n");
+
+
+        }
+
     }
 }

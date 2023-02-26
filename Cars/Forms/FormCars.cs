@@ -68,11 +68,23 @@ namespace Cars
         private void button5_Click(object sender, EventArgs e)
         {
 
+            this.Controls.Add(new pnlAddCar(id, this));
+            this.removepnl("pnlCards");
+            this.button5.Visible = false;
+            this.button3.Visible = true;
+            this.button4.Visible = true;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            cars.Clear();
+            controllerCars.getCars(cars);
 
+            this.Controls.Add(new pnlCards(id, cars, this));
+            this.removepnl("pnlAddCar");
+            this.button5.Visible = true;
+            this.button3.Visible = false;
+            this.button4.Visible = true;
         }
 
         private void label2_Click(object sender, EventArgs e)
