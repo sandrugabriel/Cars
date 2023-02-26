@@ -67,9 +67,11 @@ namespace Cars.Panel_uri
 
             this.lblPrice.Text = "Price";
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(31, 72);
+            this.lblPrice.Font = font; 
+            this.lblPrice.Location = new System.Drawing.Point(23, 75);
             this.lblPrice1.Text = masina.getPret().ToString();
-            this.lblPrice1.Location = new System.Drawing.Point(31, 80);
+            this.lblPrice1.Location = new System.Drawing.Point(35, 100);
+            this.lblPrice1.Font = font;
 
         }
 

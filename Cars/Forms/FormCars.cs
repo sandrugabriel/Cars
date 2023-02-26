@@ -1,5 +1,6 @@
 ﻿using Cars.Controller;
 using Cars.Models;
+using Cars.Panel_uri;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,6 +34,8 @@ namespace Cars
 
             cars = new List<Masina>();
             controllerCars.getCars(cars);
+
+            this.Controls.Add(new pnlCards(id,cars,this));
 
             this.button3.Visible = false;
         }
