@@ -27,7 +27,7 @@ namespace Cars.Panel_uri
             idClient = idClient1;
             controllerCars = new ControllerCars();
 
-            this.Name = "pnlMyRecipes";
+            this.Name = "pnlMyCars";
             this.BackColor = System.Drawing.Color.DarkGray;
             this.Size = new System.Drawing.Size(765, 412);
             this.Location = new System.Drawing.Point(5, 82);
@@ -70,7 +70,8 @@ namespace Cars.Panel_uri
                 {
                     string title = pnlcard.lblTitle1.Text;
                     int id = controllerCars.idByNume(title);
-                    this.form.removepnl("pnlMyRecipes");
+                    this.form.removepnl("pnlMyCars");
+                    this.form.Controls.Add(new pnlUpdate(idClient, id, form));
                 }
                 x += 200;
 

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Xml.Linq;
 
 namespace Cars.Models
 {
@@ -55,6 +57,11 @@ namespace Cars.Models
             return marca;
         }
 
+        public void setMarca(string marca)
+        {
+            this.marca = marca;
+        }
+
         public string getModel()
         {
             return model;
@@ -94,11 +101,13 @@ namespace Cars.Models
             t += "Modelul " + getModel() + "\n";
             t += "Anul aparitie " + getAnAparitie().ToString() + "\n";
             t += "Pret " + getPret() + "\n";
-
             return t;
         }
-
-
+        
+        public string toSave()
+        {
+            return idClient.ToString() + "," + id.ToString() + "," + marca + "," + model + "," + anAparitie.ToString() + "," + pret.ToString();
+        }
 
 
     }

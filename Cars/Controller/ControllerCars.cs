@@ -199,5 +199,118 @@ namespace Cars.Controller
         }
 
 
+        public int pozID(int id)
+        {
+
+            for (int i = 0; i < cars.Count; i++)
+            {
+                if (cars[i].getId() == id)
+                {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
+
+        public void stergere(int id)
+        {
+            int p = pozID(id);
+            if (p == pozID(id))
+                cars.RemoveAt(p);
+
+        }
+
+        public string toSaveFisier()
+        {
+
+            string t = "";
+
+            for (int i = 0; i < cars.Count; i++)
+            {
+                t += cars[i].toSave() + "\n";
+            }
+
+            return t;
+        }
+
+        public void deleteCar(int id)
+        {
+            this.stergere(id);
+
+            string path = Application.StartupPath + @"/data/cars.txt";
+            StreamWriter stream = new StreamWriter(path);
+
+            stream.Write(this.toSaveFisier());
+
+            stream.Close();
+        }
+
+        public void setNume(int id, string nume)
+        {
+
+            for (int i = 0; i < cars.Count; i++)
+            {
+                if (cars[i].getId() == id)
+                {
+                    cars[i].setMarca(nume);
+                }
+            }
+
+
+        }
+
+        public void setModel(int id, string nume)
+        {
+
+            for (int i = 0; i < cars.Count; i++)
+            {
+                if (cars[i].getId() == id)
+                {
+                    cars[i].setModel(nume);
+                }
+            }
+
+
+        }
+
+        public void setAn(int id, int time)
+        {
+
+            for (int i = 0; i < cars.Count; i++)
+            {
+                if (cars[i].getId() == id)
+                {
+                    cars[i].setAnAparitie(time);
+                }
+            }
+
+
+        }
+
+        public void setPrice(int id, int time)
+        {
+
+            for (int i = 0; i < cars.Count; i++)
+            {
+                if (cars[i].getId() == id)
+                {
+                    cars[i].setPret(time);
+                }
+            }
+
+
+        }
+
+        public void save()
+        {
+            String path = Application.StartupPath + @"/data/cars.txt";
+            StreamWriter streamWriter = new StreamWriter(path);
+
+            streamWriter.Write(this.toSaveFisier());
+
+            streamWriter.Close();
+        }
+
     }
 }
