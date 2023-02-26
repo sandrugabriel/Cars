@@ -53,6 +53,18 @@ namespace Cars.Controller
 
         }
 
+        public void getCars(List<Masina> cars1)
+        {
+
+            for (int i = 0; i < cars.Count; i++)
+            {
+
+                Masina a = cars[i];
+                cars1.Add(a);
+            }
+
+
+        }
 
 
     }

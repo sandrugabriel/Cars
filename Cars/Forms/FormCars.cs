@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Cars.Controller;
+using Cars.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,27 @@ namespace Cars
 {
     public partial class FormCars : Form
     {
+
+        private int id;
+
+        ControllerClients controllerClients;
+        ControllerCars controllerCars;
+        List<Masina> cars;
         public FormCars(int id1)
         {
             InitializeComponent();
+            id = id1;
+            controllerClients = new ControllerClients();
+            controllerCars = new ControllerCars();
+            controllerClients.load();
+            string name = controllerClients.numeById(id);
+
+            label2.Text = controllerClients.numeById(id);
+
+            cars = new List<Masina>();
+            controllerCars.getCars(cars);
+
+            this.button3.Visible = false;
         }
 
 
@@ -38,6 +58,26 @@ namespace Cars
 
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
 
         }
