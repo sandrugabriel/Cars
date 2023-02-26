@@ -74,6 +74,9 @@
     <Compile Include="Panel-uri\pnlLogin.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Panel-uri\pnlMyCars.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Panel-uri\pnlSignUp.cs">
       <SubType>Component</SubType>
     </Compile>
