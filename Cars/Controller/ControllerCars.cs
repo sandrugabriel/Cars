@@ -66,6 +66,23 @@ namespace Cars.Controller
 
         }
 
+        public int idByNume(string nume)
+        {
+
+            for (int i = 0; i < cars.Count; i++)
+            {
+
+                if (cars[i].getMarca().Equals(nume))
+                {
+                    return cars[i].getId();
+                }
+
+            }
+
+            return -1;
+        }
+
+
 
     }
 }
