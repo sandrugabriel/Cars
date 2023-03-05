@@ -33,6 +33,7 @@ namespace Cars.Panel_uri
             this.Size = new System.Drawing.Size(191, 175);
             this.Location = new System.Drawing.Point(53, 43);
             this.BackColor = System.Drawing.Color.White;
+            this.Anchor = AnchorStyles.Top | AnchorStyles.Left;
 
             masina = masina1;
 

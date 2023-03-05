@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Controller\ControllerCars.cs" />
     <Compile Include="Controller\ControllerClients.cs" />
+    <Compile Include="Forms\Mockup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Mockup.Designer.cs">
+      <DependentUpon>Mockup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormCars.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Mockup.resx">
+      <DependentUpon>Mockup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormCars.resx">
       <DependentUpon>FormCars.cs</DependentUpon>
     </EmbeddedResource>
