@@ -30,14 +30,16 @@ namespace Cars.Panel_uri
 
             this.Name = "pnlCards";
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.Size = new System.Drawing.Size(765, 412);
+            this.Size = new System.Drawing.Size(800, 412);
             this.Location = new System.Drawing.Point(5, 82);
             this.BackColor = System.Drawing.Color.LightGray;
+            this.Anchor = AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Bottom;
+            this.AutoScroll = true;
 
+            this.form = form1;
             cars = cars1;
-
             createCard(3);
-
+            form.ResizeEnd += new EventHandler(form_ResizeEnd);
 
             //Info
             this.lblInfo = new Label();
@@ -48,10 +50,30 @@ namespace Cars.Panel_uri
             this.lblInfo.AutoSize = true;
             this.lblInfo.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10);
 
-            this.form = form1;
-
+            form.Width = 834;
 
         }
+
+        private void form_ResizeEnd(object sender, EventArgs e)
+        {
+
+            this.Controls.Clear();
+
+            if(form.Width < 413)
+            {
+                createCard(1);
+            }else if(form.Width < 631)
+            {
+                createCard(2);
+            }
+            else
+            {
+                createCard(3);
+            }
+
+          
+        }
+
         public void createCard(int nrCollums)
         {
 

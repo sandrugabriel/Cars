@@ -47,6 +47,8 @@ namespace Cars.Panel_uri
             this.Size = new System.Drawing.Size(785, 350);
             this.Location = new System.Drawing.Point(6, 82);
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            this.AutoScroll = true;
 
             this.form.button5.Visible = false;
 

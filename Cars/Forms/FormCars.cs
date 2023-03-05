@@ -38,8 +38,30 @@ namespace Cars
             this.Controls.Add(new pnlCards(id,cars,this));
 
             this.button3.Visible = false;
+
+            this.ResizeEnd += new EventHandler(Form1_ResizeEnd);
+
         }
 
+        private void Form1_ResizeEnd(object sender, EventArgs e)
+        {
+            //MessageBox.Show(this.Width.ToString());
+            if(this.Width < 506)
+            {
+                label1.Visible = false; label2.Visible = false;
+
+                panel3.Dock = DockStyle.Top;
+                panel3.AutoScroll = true;
+
+            }
+            else
+            {
+
+                label1.Visible = true; label2.Visible = true;
+                panel3.AutoScroll = true; 
+            }
+
+        }
 
         public void removepnl(string pnl)
         {
@@ -105,6 +127,11 @@ namespace Cars
             this.removepnl("pnlAddCar");
             controllerCars.getMyCars(cars, id);
             this.Controls.Add(new pnlMyCars(id, cars, this));
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

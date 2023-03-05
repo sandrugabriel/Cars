@@ -24,6 +24,7 @@ namespace Cars.Panel_uri
             this.Name = "pnlStart";
             this.Size = new System.Drawing.Size(628, 526);
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Dock = DockStyle.Fill;
 
             //Login
 
@@ -38,6 +39,7 @@ namespace Cars.Panel_uri
             this.btnLogin.Location = new System.Drawing.Point(155, 165);
             this.btnLogin.Size = new System.Drawing.Size(135, 70);
             this.btnLogin.Click += new EventHandler(btnLogin_Click);
+            this.btnLogin.Anchor = AnchorStyles.Left | AnchorStyles.Top;
 
             //Sign Up
 
@@ -50,6 +52,7 @@ namespace Cars.Panel_uri
             this.btnSignUp.Location = new System.Drawing.Point(155, 250);
             this.btnSignUp.Size = new System.Drawing.Size(135, 70);
             this.btnSignUp.Click += new EventHandler(btnSignUp_Click);
+            this.btnSignUp.Anchor = AnchorStyles.Top | AnchorStyles.Left;
 
         }
 
